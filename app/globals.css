@@ -5,79 +5,237 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* RBI Official Color Palette */
+  /* =========================
+     RBI-Inspired Official Palette
+     ========================= */
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --background: hsl(40 38% 97%);
+  --foreground: hsl(215 30% 16%);
 
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(215 30% 16%);
 
-  /* Primary Navy Blue - used for headers, sidebars, text */
-  --primary: oklch(0.205 0 0);           /* #002366 */
-  --primary-foreground: oklch(0.985 0 0);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(215 30% 16%);
 
-  /* Orange accent - used in navigation bar and preamble banner */
-  --accent: oklch(0.97 0 0);             /* #f9a825 */
-  --accent-foreground: oklch(0.205 0 0);
+  /* Primary = RBI deep navy */
+  --primary: hsl(217 85% 18%);
+  --primary-foreground: hsl(0 0% 100%);
 
-  /* Red accent - used for links, borders, important highlights */
-  --rbi-red: hsl(348 78% 48%);           /* #c8102e */
+  /* Secondary = soft institutional cream */
+  --secondary: hsl(40 26% 92%);
+  --secondary-foreground: hsl(217 85% 18%);
 
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  /* Accent = RBI saffron/orange */
+  --accent: hsl(36 96% 58%);
+  --accent-foreground: hsl(217 85% 18%);
 
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --muted: hsl(40 18% 93%);
+  --muted-foreground: hsl(215 15% 42%);
 
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: hsl(0 72% 50%);
   --destructive-foreground: hsl(0 0% 100%);
 
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: hsl(38 22% 84%);
+  --input: hsl(38 22% 84%);
+  --ring: hsl(217 85% 18%);
 
-  --radius: 0.625rem;
+  --radius: 0.75rem;
 
-  /* Custom RBI-specific tokens */
-  --rbi-navy: hsl(217 85% 18%);          /* #002366 */
-  --rbi-navy-light: hsl(217 70% 28%);
-  --rbi-red: hsl(348 78% 48%);           /* #c8102e */
-  --rbi-orange: hsl(36 96% 58%);         /* #f9a825 */
-  --rbi-orange-dark: hsl(36 90% 48%);
-  --rbi-cream: hsl(40 35% 96%);
+  /* =========================
+     Custom RBI Tokens
+     ========================= */
+
+  --rbi-navy: hsl(217 85% 18%); /* #002366 */
+  --rbi-navy-light: hsl(217 68% 28%);
+  --rbi-navy-soft: hsl(214 48% 36%);
+
+  --rbi-red: hsl(348 78% 48%); /* #c8102e */
+
+  --rbi-orange: hsl(36 96% 58%); /* #f9a825 */
+  --rbi-orange-dark: hsl(34 92% 48%);
+  --rbi-orange-soft: hsl(39 88% 82%);
+
+  --rbi-cream: hsl(40 38% 97%);
+  --rbi-cream-dark: hsl(40 30% 92%);
+  --rbi-paper: hsl(42 42% 99%);
   --rbi-warm-gray: hsl(30 10% 94%);
-  --rbi-text: hsl(215 25% 15%);
-  --rbi-text-light: hsl(215 15% 45%);
 
-  /* Gradients */
-  --gradient-header: linear-gradient(180deg, hsl(217 85% 18%) 0%, hsl(217 70% 28%) 100%);
-  --gradient-preamble: linear-gradient(135deg, hsl(36 96% 58%) 0%, hsl(36 90% 48%) 100%);
-  --gradient-section: linear-gradient(180deg, hsl(40 35% 96%) 0%, hsl(0 0% 100%) 100%);
+  --rbi-text: hsl(215 30% 16%);
+  --rbi-text-light: hsl(215 15% 42%);
+  --rbi-heading: hsl(217 85% 18%);
 
-  /* Shadows */
-  --shadow-sm: 0 1px 3px hsl(217 85% 18% / 0.08);
-  --shadow-md: 0 4px 12px hsl(217 85% 18% / 0.1);
+  --rbi-border: hsl(38 22% 84%);
+  --rbi-border-strong: hsl(36 34% 70%);
+
+  --rbi-topbar: hsl(42 42% 88%);
+  --rbi-footer: hsl(220 22% 14%);
+  --rbi-bluegray: hsl(212 28% 90%);
+
+  /* RBI Nav (matches screenshot better) */
+  --rbi-nav-bg: hsl(35 68% 55%);
+  --rbi-nav-bg-hover: hsl(35 70% 48%);
+  --rbi-nav-border: hsl(33 52% 42%);
+  --rbi-nav-text: hsl(30 30% 12%);
+
+  /* =========================
+     RBI Homepage Specific (THIS WAS MISSING)
+     ========================= */
+
+  --rbi-page-gray: hsl(0 0% 92%);
+  --rbi-brown: hsl(28 70% 34%);
+  --rbi-blue: hsl(216 63% 42%);
+  --rbi-blue-dark: hsl(216 68% 35%);
+  --rbi-blue-strip: hsl(213 60% 50%);
+  --rbi-preamble: hsl(35 67% 52%);
+  --rbi-preamble-image: hsl(32 72% 50%);
+
+  --rbi-tab-bg: hsl(0 0% 92%);
+  --rbi-tab-active: hsl(38 42% 83%);
+  --rbi-tab-inactive: hsl(0 0% 92%);
+  --rbi-tab-hover: hsl(38 32% 88%);
+  --rbi-tab-content: hsl(38 38% 86%);
+
+  /* =========================
+     Gradients
+     ========================= */
+
+  --gradient-header: linear-gradient(
+    180deg,
+    hsl(217 85% 18%) 0%,
+    hsl(217 68% 28%) 100%
+  );
+
+  --gradient-preamble: linear-gradient(
+    135deg,
+    hsl(36 96% 58%) 0%,
+    hsl(34 92% 48%) 100%
+  );
+
+  --gradient-section: linear-gradient(
+    180deg,
+    hsl(40 38% 97%) 0%,
+    hsl(0 0% 100%) 100%
+  );
+
+  --gradient-paper: linear-gradient(
+    180deg,
+    hsl(42 42% 99%) 0%,
+    hsl(40 30% 94%) 100%
+  );
+
+  /* =========================
+     Shadows
+     ========================= */
+
+  --shadow-sm: 0 1px 3px hsl(217 85% 18% / 0.06);
+  --shadow-md: 0 4px 12px hsl(217 85% 18% / 0.08);
   --shadow-lg: 0 8px 30px hsl(217 85% 18% / 0.12);
-  --shadow-card: 0 2px 8px hsl(217 85% 18% / 0.07);
+  --shadow-card: 0 2px 10px hsl(217 85% 18% / 0.06);
 
-  /* Sidebar */
+  /* =========================
+     Sidebar
+     ========================= */
+
   --sidebar-background: hsl(0 0% 98%);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-foreground: hsl(215 30% 16%);
+  --sidebar-primary: hsl(217 85% 18%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-border: hsl(38 22% 84%);
+  --sidebar-accent: hsl(40 26% 92%);
+  --sidebar-accent-foreground: hsl(217 85% 18%);
+  --sidebar-ring: hsl(217 85% 18%);
+
+  /* Charts */
+  --chart-1: hsl(217 85% 18%);
+  --chart-2: hsl(36 96% 58%);
+  --chart-3: hsl(348 78% 48%);
+  --chart-4: hsl(214 48% 36%);
+  --chart-5: hsl(38 34% 56%);
+}
+
+.dark {
+  --background: hsl(220 20% 10%);
+  --foreground: hsl(40 20% 94%);
+
+  --card: hsl(220 18% 14%);
+  --card-foreground: hsl(40 20% 94%);
+
+  --popover: hsl(220 18% 14%);
+  --popover-foreground: hsl(40 20% 94%);
+
+  --primary: hsl(36 96% 58%);
+  --primary-foreground: hsl(217 85% 18%);
+
+  --secondary: hsl(220 12% 18%);
+  --secondary-foreground: hsl(40 20% 94%);
+
+  --accent: hsl(36 92% 50%);
+  --accent-foreground: hsl(220 20% 10%);
+
+  --muted: hsl(220 12% 18%);
+  --muted-foreground: hsl(40 10% 72%);
+
+  --destructive: hsl(0 62% 45%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  --border: hsl(220 12% 22%);
+  --input: hsl(220 12% 22%);
+  --ring: hsl(36 96% 58%);
+
+  --rbi-navy: hsl(217 48% 42%);
+  --rbi-navy-light: hsl(217 42% 50%);
+  --rbi-navy-soft: hsl(214 34% 58%);
+
+  --rbi-red: hsl(348 72% 56%);
+  --rbi-orange: hsl(36 96% 58%);
+  --rbi-orange-dark: hsl(34 92% 48%);
+  --rbi-orange-soft: hsl(39 70% 34%);
+
+  --rbi-cream: hsl(220 16% 12%);
+  --rbi-cream-dark: hsl(220 12% 16%);
+  --rbi-paper: hsl(220 14% 14%);
+  --rbi-warm-gray: hsl(220 8% 18%);
+
+  --rbi-text: hsl(40 20% 94%);
+  --rbi-text-light: hsl(40 10% 72%);
+  --rbi-heading: hsl(36 96% 58%);
+
+  --rbi-border: hsl(220 12% 22%);
+  --rbi-border-strong: hsl(36 32% 44%);
+
+  --rbi-topbar: hsl(220 14% 16%);
+  --rbi-footer: hsl(220 18% 8%);
+  --rbi-bluegray: hsl(220 14% 18%);
+
+  --rbi-nav-bg: hsl(35 68% 55%);
+  --rbi-nav-bg-hover: hsl(35 70% 48%);
+  --rbi-nav-border: hsl(33 52% 42%);
+  --rbi-nav-text: hsl(30 30% 12%);
+
+  /* RBI Homepage Specific (dark-safe values) */
+  --rbi-page-gray: hsl(220 12% 14%);
+  --rbi-brown: hsl(36 72% 60%);
+  --rbi-blue: hsl(216 58% 44%);
+  --rbi-blue-dark: hsl(216 62% 36%);
+  --rbi-blue-strip: hsl(213 58% 44%);
+  --rbi-preamble: hsl(35 60% 48%);
+  --rbi-preamble-image: hsl(32 65% 44%);
+
+  --rbi-tab-bg: hsl(220 10% 18%);
+  --rbi-tab-active: hsl(36 28% 36%);
+  --rbi-tab-inactive: hsl(220 10% 18%);
+  --rbi-tab-hover: hsl(220 10% 24%);
+  --rbi-tab-content: hsl(36 18% 24%);
+
+  --sidebar: hsl(220 18% 14%);
+  --sidebar-foreground: hsl(40 20% 94%);
+  --sidebar-primary: hsl(36 96% 58%);
+  --sidebar-primary-foreground: hsl(220 20% 10%);
+  --sidebar-accent: hsl(220 12% 18%);
+  --sidebar-accent-foreground: hsl(40 20% 94%);
+  --sidebar-border: hsl(220 12% 22%);
+  --sidebar-ring: hsl(36 96% 58%);
 }
 
 @theme inline {
@@ -111,21 +269,67 @@
 
   --color-rbi-navy: var(--rbi-navy);
   --color-rbi-navy-light: var(--rbi-navy-light);
+  --color-rbi-navy-soft: var(--rbi-navy-soft);
   --color-rbi-red: var(--rbi-red);
   --color-rbi-orange: var(--rbi-orange);
   --color-rbi-orange-dark: var(--rbi-orange-dark);
+  --color-rbi-orange-soft: var(--rbi-orange-soft);
   --color-rbi-cream: var(--rbi-cream);
+  --color-rbi-cream-dark: var(--rbi-cream-dark);
+  --color-rbi-paper: var(--rbi-paper);
   --color-rbi-warm-gray: var(--rbi-warm-gray);
   --color-rbi-text: var(--rbi-text);
   --color-rbi-text-light: var(--rbi-text-light);
+  --color-rbi-heading: var(--rbi-heading);
+  --color-rbi-border: var(--rbi-border);
+  --color-rbi-border-strong: var(--rbi-border-strong);
+  --color-rbi-topbar: var(--rbi-topbar);
+  --color-rbi-footer: var(--rbi-footer);
+  --color-rbi-bluegray: var(--rbi-bluegray);
+
+  --color-rbi-nav-bg: var(--rbi-nav-bg);
+  --color-rbi-nav-bg-hover: var(--rbi-nav-bg-hover);
+  --color-rbi-nav-border: var(--rbi-nav-border);
+  --color-rbi-nav-text: var(--rbi-nav-text);
+
+  /* Homepage specific theme tokens */
+  --color-rbi-page-gray: var(--rbi-page-gray);
+  --color-rbi-brown: var(--rbi-brown);
+  --color-rbi-blue: var(--rbi-blue);
+  --color-rbi-blue-dark: var(--rbi-blue-dark);
+  --color-rbi-blue-strip: var(--rbi-blue-strip);
+  --color-rbi-preamble: var(--rbi-preamble);
+  --color-rbi-preamble-image: var(--rbi-preamble-image);
+  --color-rbi-tab-bg: var(--rbi-tab-bg);
+  --color-rbi-tab-active: var(--rbi-tab-active);
+  --color-rbi-tab-inactive: var(--rbi-tab-inactive);
+  --color-rbi-tab-hover: var(--rbi-tab-hover);
+  --color-rbi-tab-content: var(--rbi-tab-content);
 
   --color-sidebar-background: var(--sidebar-background);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
   --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
 
-  --radius-sm: var(--radius);
+  --color-sidebar: var(--sidebar);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) * 0.75);
+  --radius-md: calc(var(--radius) * 0.9);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.25);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-3xl: calc(var(--radius) * 2);
+  --radius-4xl: calc(var(--radius) * 2.5);
 
   --shadow-sm: var(--shadow-sm);
   --shadow-md: var(--shadow-md);
@@ -133,81 +337,187 @@
   --shadow-card: var(--shadow-card);
 
   --font-sans: var(--font-sans);
-
   --font-heading: var(--font-sans);
-
-  --color-sidebar-ring: var(--sidebar-ring);
-
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-
-  --color-sidebar-accent: var(--sidebar-accent);
-
-  --color-sidebar: var(--sidebar);
-
-  --color-chart-5: var(--chart-5);
-
-  --color-chart-4: var(--chart-4);
-
-  --color-chart-3: var(--chart-3);
-
-  --color-chart-2: var(--chart-2);
-
-  --color-chart-1: var(--chart-1);
-
-  --radius-md: calc(var(--radius) * 0.8);
-
-  --radius-lg: var(--radius);
-
-  --radius-xl: calc(var(--radius) * 1.4);
-
-  --radius-2xl: calc(var(--radius) * 1.8);
-
-  --radius-3xl: calc(var(--radius) * 2.2);
-
-  --radius-4xl: calc(var(--radius) * 2.6);
 }
+
+/* =========================
+   Base
+   ========================= */
 
 * {
   border-color: var(--border);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   font-weight: 600;
+  color: var(--rbi-heading);
 }
 
-/* Utility Classes */
+::selection {
+  background: hsl(36 96% 58% / 0.25);
+  color: var(--rbi-text);
+}
+
+/* =========================
+   RBI Utility Classes
+   ========================= */
+
 .section-title {
-  @apply text-2xl font-semibold text-[hsl(217_85%_18%)];
+  @apply text-2xl font-semibold md:text-3xl;
+  color: var(--rbi-heading);
+}
+
+.section-subtitle {
+  @apply text-sm md:text-base;
+  color: var(--rbi-text-light);
 }
 
 .nav-link {
-  @apply text-sm font-medium text-white hover:text-white/90 transition-colors;
+  @apply text-sm font-medium transition-colors;
+  color: var(--rbi-nav-text);
+}
+
+.nav-link:hover {
+  color: var(--rbi-nav-text);
 }
 
 .card-hover {
-  @apply transition-all duration-300 hover:shadow-md hover:-translate-y-0.5;
+  @apply transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md;
+}
+
+.gov-card {
+  @apply rounded-2xl border bg-white shadow-sm transition-all duration-300;
+  border-color: var(--rbi-border);
+  box-shadow: var(--shadow-card);
+}
+
+.gov-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--rbi-border-strong);
+}
+
+.gov-panel {
+  @apply rounded-2xl border;
+  border-color: var(--rbi-border);
+  background: var(--gradient-paper);
+}
+
+.gov-section {
+  background: var(--gradient-section);
+}
+
+.gov-topbar {
+  background: var(--rbi-topbar);
+  color: var(--rbi-text);
+}
+
+.gov-header {
+  background: white;
+  color: var(--rbi-text);
+}
+
+.gov-nav {
+  background: var(--rbi-nav-bg);
+  color: var(--rbi-nav-text);
+}
+
+.gov-footer {
+  background: var(--rbi-footer);
+  color: white;
+}
+
+.gov-divider {
+  border-color: var(--rbi-border);
+}
+
+.gov-highlight {
+  color: var(--rbi-red);
+}
+
+.gov-orange-accent {
+  color: var(--rbi-orange);
+}
+
+.gov-soft-bg {
+  background: var(--rbi-cream-dark);
+}
+
+.gov-bluegray {
+  background: var(--rbi-bluegray);
 }
 
 .btn-rbi {
-  @apply bg-[hsl(217_85%_18%)] text-white px-6 py-2.5 rounded font-medium text-sm hover:bg-[hsl(217_70%_28%)] transition-colors;
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-colors;
+  background: var(--rbi-navy);
+  color: white;
+}
+
+.btn-rbi:hover {
+  background: var(--rbi-navy-light);
 }
 
 .btn-orange {
-  @apply bg-[hsl(36_96%_58%)] text-[hsl(217_85%_18%)] px-6 py-2.5 rounded font-medium text-sm hover:bg-[hsl(36_90%_48%)] transition-colors;
+  @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-medium transition-colors;
+  background: var(--rbi-orange);
+  color: var(--rbi-navy);
+}
+
+.btn-orange:hover {
+  background: var(--rbi-orange-dark);
 }
 
 .info-strip {
-  @apply bg-[hsl(40_35%_96%)] border-l-4 border-[hsl(36_96%_58%)] p-4;
+  @apply border-l-4 p-4;
+  background: hsl(40 38% 95%);
+  border-color: var(--rbi-orange);
 }
 
-/* Scrollbar */
+.rbi-news-link {
+  @apply text-sm font-medium transition-colors;
+  color: var(--rbi-red);
+}
+
+.rbi-news-link:hover {
+  color: var(--rbi-navy);
+}
+
+.rbi-rate-card {
+  @apply rounded-xl border bg-white p-5 shadow-sm;
+  border-color: var(--rbi-border);
+}
+
+.rbi-rate-label {
+  @apply text-sm;
+  color: var(--rbi-text-light);
+}
+
+.rbi-rate-value {
+  @apply mt-2 text-2xl font-bold;
+  color: var(--rbi-navy);
+}
+
+/* =========================
+   Scrollbar
+   ========================= */
+
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -215,93 +525,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(217 85% 18%);
-  border-radius: 3px;
+  background: var(--rbi-navy);
+  border-radius: 999px;
 }
 
-/* Animations (kept as-is) */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rbi-navy-light);
+}
+
+/* =========================
+   Animation
+   ========================= */
+
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.dark {
-
-  --background: oklch(0.145 0 0);
-
-  --foreground: oklch(0.985 0 0);
-
-  --card: oklch(0.205 0 0);
-
-  --card-foreground: oklch(0.985 0 0);
-
-  --popover: oklch(0.205 0 0);
-
-  --popover-foreground: oklch(0.985 0 0);
-
-  --primary: oklch(0.922 0 0);
-
-  --primary-foreground: oklch(0.205 0 0);
-
-  --secondary: oklch(0.269 0 0);
-
-  --secondary-foreground: oklch(0.985 0 0);
-
-  --muted: oklch(0.269 0 0);
-
-  --muted-foreground: oklch(0.708 0 0);
-
-  --accent: oklch(0.269 0 0);
-
-  --accent-foreground: oklch(0.985 0 0);
-
-  --destructive: oklch(0.704 0.191 22.216);
-
-  --border: oklch(1 0 0 / 10%);
-
-  --input: oklch(1 0 0 / 15%);
-
-  --ring: oklch(0.556 0 0);
-
-  --chart-1: oklch(0.87 0 0);
-
-  --chart-2: oklch(0.556 0 0);
-
-  --chart-3: oklch(0.439 0 0);
-
-  --chart-4: oklch(0.371 0 0);
-
-  --chart-5: oklch(0.269 0 0);
-
-  --sidebar: oklch(0.205 0 0);
-
-  --sidebar-foreground: oklch(0.985 0 0);
-
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-
-  --sidebar-accent: oklch(0.269 0 0);
-
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-
-  --sidebar-border: oklch(1 0 0 / 10%);
-
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+
   html {
     @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
