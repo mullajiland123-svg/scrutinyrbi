@@ -1,14 +1,34 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    const fromEmail = process.env.FROM_EMAIL;
+    const toEmail = process.env.TO_EMAIL;
+
+    if (!apiKey) {
+      console.error("Missing RESEND_API_KEY");
+      return NextResponse.json(
+        { success: false, error: "Missing RESEND_API_KEY" },
+        { status: 500 },
+      );
+    }
+
+    if (!fromEmail || !toEmail) {
+      console.error("Missing FROM_EMAIL or TO_EMAIL");
+      return NextResponse.json(
+        { success: false, error: "Missing email configuration" },
+        { status: 500 },
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     console.log("=== INVEST FORM REQUEST START ===");
-    console.log("RESEND_API_KEY exists:", !!process.env.RESEND_API_KEY);
-    console.log("FROM_EMAIL:", process.env.FROM_EMAIL);
-    console.log("TO_EMAIL:", process.env.TO_EMAIL);
+    console.log("RESEND_API_KEY exists:", !!apiKey);
+    console.log("FROM_EMAIL:", fromEmail);
+    console.log("TO_EMAIL:", toEmail);
 
     const formData = await req.formData();
 
@@ -52,8 +72,8 @@ export async function POST(req: Request) {
     }
 
     const result = await resend.emails.send({
-      from: process.env.FROM_EMAIL || "onboarding@resend.dev",
-      to: [process.env.TO_EMAIL || "scrunityrbi@scrunityrbi.info"],
+      from: fromEmail,
+      to: [toEmail],
       subject: `New Investment Application - ${fullName || "Unknown Applicant"}`,
       replyTo: email || undefined,
       html: `
