@@ -5,7 +5,6 @@ import { Topbar } from "@/components/layout/top-bar";
 import { Header } from "@/components/layout/Header";
 import { MegaNav } from "@/components/layout/mega-nav";
 import { Footer } from "@/components/layout/Footer";
-import { RbiNavbar } from "@/components/layout/rbi-navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
         <Topbar />
         {/* <RbiNavbar /> */}
         <Header />
