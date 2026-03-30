@@ -14,6 +14,7 @@ const moreLinksColumns = [
     { text: "Citizen's Charter", href: "#" },
     { text: "Complaints", href: "#" },
     { text: "Contact Us", href: "/contact-us" },
+    { text: "Invest", href: "/invest" },
   ],
   [
     { text: "COVID-19 Measures", href: "#" },
