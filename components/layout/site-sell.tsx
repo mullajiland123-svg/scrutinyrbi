@@ -1,4 +1,4 @@
-import Footer from "./Footer";
+import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { MegaNav } from "./mega-nav";
 import { Topbar } from "./top-bar";

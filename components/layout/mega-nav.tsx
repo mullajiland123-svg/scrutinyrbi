@@ -153,13 +153,17 @@ export function MegaNav() {
           </span>
 
           <Sheet>
-            <SheetTrigger>
-              <button
-                type="button"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-rbi-nav-border text-rbi-nav-text"
-              >
-                <Menu className="h-5 w-5" />
-              </button>
+            <SheetTrigger
+              render={
+                <button
+                  type="button"
+                  aria-label="Open navigation menu"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-rbi-nav-border text-rbi-nav-text"
+                />
+              }
+            >
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Open navigation menu</span>
             </SheetTrigger>
 
             <SheetContent side="left" className="w-[320px] bg-white p-0">
@@ -187,6 +191,7 @@ export function MegaNav() {
                         {item.children && (
                           <button
                             type="button"
+                            aria-label={`Toggle ${item.label} submenu`}
                             onClick={() =>
                               setOpenMobileDropdown((prev) =>
                                 prev === item.label ? null : item.label,
